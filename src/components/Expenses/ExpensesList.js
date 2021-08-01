@@ -3,14 +3,14 @@ import ExpenseItem from "./ExpenseItem";
 import "./ExpensesList.css";
 
 const ExpensesList = (props) => {
-  if (props.items.length === 0) {
+  if (props.expenses.length === 0) {
     return <h2 className="expenses-list__fallback">No expenses found!</h2>;
   }
 
   return (
     <ul className="expenses-list">
-      {props.items.map((anItem) => (
-        <ExpenseItem key={anItem.id} title={anItem.title} amount={anItem.amount} date={anItem.date} />
+      {props.expenses.map((expense) => (
+        <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />
       ))}
     </ul>
   );

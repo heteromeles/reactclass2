@@ -14,7 +14,6 @@ const App = () => {
 
   const addExpenseHandler = (aNewExpense) => {
     setExpenses((aPreviousExpenses) => {
-      console.log(aPreviousExpenses);
       return [aNewExpense, ...aPreviousExpenses];
     });
   };
@@ -22,7 +21,7 @@ const App = () => {
   return (
     <div className="App">
       <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={theExpenses} />
+      <Expenses expenses={theExpenses} />
     </div>
   );
 };
